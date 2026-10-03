@@ -121,59 +121,7 @@ area from a total.
 
 ---
 
-## 6. Viva / presentation talking points
-
-**Problem statement:** Homeowners and building managers want to know how
-many solar panels their roof can realistically hold and what capacity that
-gives them — but this depends on real roof shape, real obstacles, and real
-panel specs, not just a rough "roof area ÷ panel area" guess.
-
-**Objective:** Build a step-by-step planning tool that takes a building's
-real dimensions, a real commercial solar panel, and real rooftop obstacles,
-and produces a geometrically-grounded panel count, capacity estimate, and
-recommendation.
-
-**Why no machine learning:** Every decision in this app follows from
-geometry (does this rectangle fit here?) and simple threshold rules
-(what % utilisation counts as a "good fit"?). There is no pattern to learn
-from data — the relationships are deterministic physical/geometric facts,
-so a rule-based engine is the correct, honest tool. Introducing ML here
-would add complexity without adding accuracy.
-
-**Frontend:** 12 separate pages built with `bslib` cards, navigated with
-`shinyjs::show()/hide()`, giving a real multi-page feel.
-
-**Backend:** Reactive values (`reactiveVal`) hold state that changes
-outside plain inputs (the obstacles table and every calculated result);
-`observeEvent()` blocks handle every button click, calculation, and page
-transition.
-
-**Dataset:** A small, honestly-sourced real panel database — every number
-traceable to a manufacturer datasheet.
-
-**Calculations:** Area/perimeter/diagonal geometry for the building,
-mm→m unit conversion and multiplication/division for solar capacity.
-
-**Panel arrangement:** A rectangle-grid placement algorithm with
-rectangle-vs-rectangle collision checks against expanded obstacle zones —
-see section 4 above.
-
-**Visualization:** `ggplot2::geom_rect()` draws every rectangle (building,
-rooftop, obstacles, panels) directly from the numeric inputs — change a
-number, the picture changes. Nothing is a stock photo.
-
-**Recommendation:** A ladder of `if/else` rules based on rooftop
-utilisation percentage, plus extra sentences added when specific
-conditions are true (obstacles present, one orientation beats the other,
-high-efficiency panel, etc.) — see `recommendation_engine.R`.
-
-**Future improvements:** Real shading/sun-path analysis, actual inverter
-string-sizing rules, non-rectangular roof shapes, cost/payback estimates,
-saving/loading projects.
-
----
-
-## 7. Publishing this project to GitHub
+## 6. Publishing this project to GitHub
 
 See the step-by-step instructions given alongside this project (or your
 chat conversation) for the exact `git` commands to initialize a repository,
@@ -181,15 +129,8 @@ commit these files, and push them to GitHub.
 
 ---
 
-## 8. My Shiny Project
-
-An interactive data analysis and visualization application developed using R and Shiny.
-
-## Live Application
+## 7. Live Application
 [View the Live Shiny App]( https://praveena010203.shinyapps.io/EcoSpace/)
 
-## Technologies Used
-- R
-- Shiny
-- RStudio
+
 
