@@ -86,7 +86,7 @@ matter how many panels you eventually add.
 
 ---
 
-## 4. How the panel arrangement algorithm works (for your viva)
+## 4. How the panel arrangement algorithm works 
 
 1. Shrink the rooftop rectangle inward by the **edge clearance** → the
    "placement zone".
