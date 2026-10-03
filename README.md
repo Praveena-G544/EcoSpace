@@ -178,3 +178,18 @@ saving/loading projects.
 See the step-by-step instructions given alongside this project (or your
 chat conversation) for the exact `git` commands to initialize a repository,
 commit these files, and push them to GitHub.
+
+---
+
+## 8. My Shiny Project
+
+An interactive data analysis and visualization application developed using R and Shiny.
+
+## Live Application
+[View the Live Shiny App]( https://praveena010203.shinyapps.io/EcoSpace/)
+
+## Technologies Used
+- R
+- Shiny
+- RStudio
+
